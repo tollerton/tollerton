@@ -1,4 +1,4 @@
-## Hi, I'm Shaun! I'm a UX designer at Google based in London.
+## Hi, I'm Shaun! I'm an interaction designer at Google based in London.
 
 - [Instagram](https://instagram.com/tollerton)
 - [LinkedIn](https://linkedin.com/in/tollerton)
