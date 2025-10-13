@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="/feeds/atom-style.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://astro-chiri.netlify.app</id>
+    <title>CHIRI</title>
+    <updated>2025-10-13T00:43:59.855Z</updated>
+    <generator>Astro Chiri Feed Generator</generator>
+    <author>
+        <name>3ASH</name>
+        <uri>https://astro-chiri.netlify.app</uri>
+    </author>
+    <link rel="alternate" href="https://astro-chiri.netlify.app"/>
+    <link rel="self" href="https://astro-chiri.netlify.app/atom.xml"/>
+    <subtitle>Minimal blog built by Astro</subtitle>
+    <rights>Copyright © 2025 3ASH</rights>
+    <entry>
+        <title type="html"><![CDATA[Theme Guide]]></title>
+        <id>https://astro-chiri.netlify.app/theme-guide</id>
+        <link href="https://astro-chiri.netlify.app/theme-guide"/>
+        <updated>2025-07-10T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>Chiri is a minimal blog theme built with <a href="https://astro.build">Astro</a>, offering customization options while preserving its clean aesthetic.</p>
+<hr />
+<h2>Basic Commands</h2>
+<ul>
+<li><code>pnpm new &lt;title&gt;</code> - Create a new post (use <code>_title</code> for drafts)</li>
+<li><code>pnpm update-theme</code> - Update the theme to the latest version</li>
+</ul>
+<h2>Main Files &amp; Directories</h2>
+<ul>
+<li><code>src/content/about/about.md</code> - Edit the about section of the index page. Leave it empty if you don’t want any content.</li>
+<li><code>src/content/posts/</code> - All blog posts are stored here</li>
+<li><code>src/config.ts</code> - Configure main site info and settings</li>
+</ul>
+<pre><code class="language-ts">// Site Info
+site: {
+  website: 'https://astro-chiri.netlify.app/', // Site domain
+  title: 'CHIRI', // Site title
+  author: '3ASH', // Author name
+  description: 'Minimal blog built by Astro', // Site description
+  language: 'en-US' // Default language
+},
+</code></pre>
+<pre><code class="language-ts">// General Settings
+general: {
+  contentWidth: '35rem', // Content area width
+  centeredLayout: true, // Use centered layout (false for left-aligned)
+  themeToggle: false, // Show theme toggle button (uses system theme by default)
+  postListDottedDivider: false, // Show dotted divider in post list
+  footer: true, // Show footer
+  fadeAnimation: true // Enable fade animations
+},
+</code></pre>
+<pre><code class="language-ts">// Date Settings
+date: {
+  dateFormat: 'YYYY-MM-DD', // Date format: YYYY-MM-DD, MM-DD-YYYY, DD-MM-YYYY, MONTH DAY YYYY, DAY MONTH YYYY
+  dateSeparator: '.', // Date separator: . - / (except for MONTH DAY YYYY and DAY MONTH YYYY)
+  dateOnRight: true // Date position in post list (true for right, false for left)
+},
+</code></pre>
+<pre><code class="language-ts">// Post Settings
+post: {
+  readingTime: false, // Show reading time in posts
+  toc: true, // Show table of contents (when there is enough page width)
+  imageViewer: true, // Enable image viewer
+  copyCode: true, // Enable copy button in code blocks
+  linkCard: true // Enable link card
+}
+</code></pre>
+<h2>Post Frontmatter</h2>
+<p>Only <code>title</code> and <code>pubDate</code> are required fields</p>
+<pre><code class="language-ts">---
+title: 'Post Title'
+pubDate: '2025-07-10'
+---
+</code></pre>
+<h2>Syntax Highlighting</h2>
+<p>You can configure the theme via <code>shikiConfig</code> in <code>astro.config.ts</code>.</p>
+<p>More details: <a href="https://docs.astro.build/en/guides/syntax-highlighting/">Syntax Highlighting | Astro Docs</a></p>
+<pre><code class="language-ts">import { defineConfig } from 'astro/config'
+
+export default defineConfig({
+  markdown: {
+    shikiConfig: {
+      light: 'github-light',
+      dark: 'github-dark',
+      wrap: false
+    }
+  }
+})
+</code></pre>
+<hr />
+<h2>Preview of Some Features</h2>
+<p><img src="https://astro-chiri.netlify.app/.netlify/images?url=tollerton%2F_astro%2Ftheme-toggle.DL6dj9X1.png&amp;fm=webp&amp;w=800&amp;h=357" alt="Theme Toggle" /></p>
+<p><img src="https://astro-chiri.netlify.app/.netlify/images?url=tollerton%2F_astro%2Fdotted-divider.BwnyJfZB.png&amp;fm=webp&amp;w=800&amp;h=494" alt="Dotted Divider" /></p>
+<p><img src="https://astro-chiri.netlify.app/.netlify/images?url=tollerton%2F_astro%2Fdate-on-left.DuSMCrdJ.png&amp;fm=webp&amp;w=800&amp;h=494" alt="Date on Left Side" /></p>
+<p><img src="https://astro-chiri.netlify.app/.netlify/images?url=tollerton%2F_astro%2Ftoc.BRVY_c5M.png&amp;fm=webp&amp;w=800&amp;h=403" alt="Table of Contents" /></p>
+<p><img src="https://astro-chiri.netlify.app/.netlify/images?url=tollerton%2F_astro%2Freading-time.DPHOOJ6E.png&amp;fm=webp&amp;w=800&amp;h=357" alt="Reading Time" /></p>
+<p><img src="https://astro-chiri.netlify.app/.netlify/images?url=tollerton%2F_astro%2Fcopy-code.Bcf3CMSv.png&amp;fm=webp&amp;w=800&amp;h=380" alt="Copy Code" /></p>
+]]></content>
+        <published>2025-07-10T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Markdown Style Guide]]></title>
+        <id>https://astro-chiri.netlify.app/markdown-style-guide</id>
+        <link href="https://astro-chiri.netlify.app/markdown-style-guide"/>
+        <updated>2025-06-28T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>This theme does not define more levels of headlines. If needed, you can define them in <code>src/styles/post.css</code>.</p>
+<hr />
+<h2>Paragraph</h2>
+<p>Here’s a practical example of a paragraph in Markdown. This text demonstrates how content flows naturally in a blog post.</p>
+<p>You can use various formatting options like <strong>bold</strong>, <em>italic</em>, <s>strikethrough</s>, and <code>code</code> within your paragraphs.</p>
+<h2>Blockquotes</h2>
+<blockquote>
+<p>Don’t communicate by sharing memory, share memory by communicating.<br />
+— <cite>Rob Pike[^1]</cite></p>
+</blockquote>
+<p>[^1]: The above quote is excerpted from Rob Pike’s <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk</a> during Gopherfest, November 18, 2015.</p>
+<h3>Ordered List</h3>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<h3>Unordered List</h3>
+<ul>
+<li>Item
+<ul>
+<li>Subitem</li>
+<li>Subitem</li>
+</ul>
+</li>
+</ul>
+<h2>Task List</h2>
+<ul>
+<li>[ ] First item</li>
+<li>[ ] Second item</li>
+<li>[x] Third item</li>
+</ul>
+<h2>Image</h2>
+<p>To hide the caption, start it with an underscore <code>_</code> or leave the alt text empty.</p>
+<p><img src="https://astro-chiri.netlify.app/.netlify/images?url=tollerton%2F_astro%2Fhikari.49tAlBUT.jpg&amp;fm=webp&amp;w=800&amp;h=548" alt="HIKARI" /></p>
+<h2>Tables</h2>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>Weight</th>
+<th>Other</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td>Regular</td>
+<td>Text</td>
+</tr>
+<tr>
+<td><em>Italic</em></td>
+<td><strong>Bold</strong></td>
+<td><code>Code</code></td>
+</tr>
+</tbody>
+</table>
+<h2>Code Blocks</h2>
+<pre><code class="language-jsx">// Button.jsx
+
+const Button = ({ text, onClick }) =&gt; {
+  const [count, setCount] = useState(0)
+
+  const handleClick = () =&gt; {
+    setCount(count + 1)
+    onClick?.()
+  }
+
+  return (
+    &lt;button className="btn" onClick={handleClick}&gt;
+      {text} ({count})
+    &lt;/button&gt;
+  )
+}
+</code></pre>
+<h2>Other Elements — sub, sup, abbr, kbd, mark</h2>
+<p>H<sub>2</sub>O</p>
+<p>X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup></p>
+<p><abbr>GIF</abbr> is a bitmap image format.</p>
+<p>Press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Delete</kbd> to end the session.</p>
+<p>Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.</p>
+<hr />
+]]></content>
+        <published>2025-06-28T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Embedded Content]]></title>
+        <id>https://astro-chiri.netlify.app/embedded-content</id>
+        <link href="https://astro-chiri.netlify.app/embedded-content"/>
+        <updated>2025-06-06T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>Use these directives to embed media:</p>
+<pre><code>::link{url="https://xxxxx.xxx"}
+
+::spotify{url="https://open.spotify.com/type/xxxxx"}
+
+::youtube{url="https://www.youtube.com/watch?v=xxxxx"}
+
+::bilibili{url="https://www.bilibili.com/video/xxxxx"}
+
+::github{repo="username/repo"}
+
+::x{url="https://x.com/username/status/xxxxx"}
+
+::neodb{url="https://neodb.social/category/xxxxx"}
+</code></pre>
+<pre><code>🟡
+
+When embedded content is still loading,
+the table of contents positioning may be inaccurate.
+</code></pre>
+<h2>Link Card</h2>
+<p>::link{url=“<a href="https://pitchfork.com/reviews/albums/ichiko-aoba-luminescent-creatures/">https://pitchfork.com/reviews/albums/ichiko-aoba-luminescent-creatures/</a>”}</p>
+<pre><code>🟡
+
+If you don’t need Link Card,
+you can set `linkCard` to `false` in `src/config.ts`,
+then you don't need to set adapter before building.
+</code></pre>
+<h2>Spotify</h2>
+<p>::spotify{url=“<a href="https://open.spotify.com/track/41Y0ch6R3jzpJOZv6nhf9Z?si=6c82dbed65ab4853">https://open.spotify.com/track/41Y0ch6R3jzpJOZv6nhf9Z?si=6c82dbed65ab4853</a>”}</p>
+<p>::spotify{url=“<a href="https://open.spotify.com/album/1kBPEN3NIVwjdmIjjNk9vB?si=Lz29MvjwRnKX9y3dhxlbaQ">https://open.spotify.com/album/1kBPEN3NIVwjdmIjjNk9vB?si=Lz29MvjwRnKX9y3dhxlbaQ</a>”}</p>
+<h2>YouTube</h2>
+<p>::youtube{url=“<a href="https://www.youtube.com/embed/GlhV-OKHecI?si=KdB4rRPLAMEK-ozf">https://www.youtube.com/embed/GlhV-OKHecI?si=KdB4rRPLAMEK-ozf</a>”}</p>
+<h2>BiliBili</h2>
+<p>::bilibili{url=“<a href="https://www.bilibili.com/video/BV1Vm421W7pX/?vd_source=c0bc2746a6d2b23de50d26376498b2ff">https://www.bilibili.com/video/BV1Vm421W7pX/?vd_source=c0bc2746a6d2b23de50d26376498b2ff</a>”}</p>
+<h2>GitHub</h2>
+<p>::github{repo=“the3ash/astro-chiri”}</p>
+<h2>X Post</h2>
+<p>::x{url=“<a href="https://x.com/DAVID_LYNCH/status/1174367510893752321">https://x.com/DAVID_LYNCH/status/1174367510893752321</a>”}</p>
+<h2>NeoDB (CN Only)</h2>
+<p>::neodb{url=“<a href="https://neodb.social/album/5nD3R8gmnVlsoOBdyO8PA3">https://neodb.social/album/5nD3R8gmnVlsoOBdyO8PA3</a>”}</p>
+<p>::neodb{url=“<a href="https://neodb.social/movie/1bhogjXkNnlWWM0bf6aj8P">https://neodb.social/movie/1bhogjXkNnlWWM0bf6aj8P</a>”}</p>
+<p>::neodb{url=“<a href="https://neodb.social/book/4BqQ5mhfKMHPND3L6hf0Qh">https://neodb.social/book/4BqQ5mhfKMHPND3L6hf0Qh</a>”}</p>
+<p>::neodb{url=“<a href="https://neodb.social/game/1hl18l0qD5UN93k8ZkCZ7Q">https://neodb.social/game/1hl18l0qD5UN93k8ZkCZ7Q</a>”}</p>
+]]></content>
+        <published>2025-06-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[KaTeX Examples]]></title>
+        <id>https://astro-chiri.netlify.app/katex-example</id>
+        <link href="https://astro-chiri.netlify.app/katex-example"/>
+        <updated>2025-05-19T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>This theme includes built-in KaTeX support for rendering mathematical expressions in your content.</p>
+<hr />
+<h2>Examples</h2>
+<ul>
+<li>Inline math: $E = mc^2$</li>
+<li>Block math:</li>
+</ul>
+<p>$$
+\begin{equation}
+\sum_{i=1}^{k+1} i = \left(\sum_{i=1}^{k} i\right) + (k+1)
+\end{equation}
+$$</p>
+<p>$$
+\begin{equation}
+= \frac{k(k+1)}{2} + k + 1
+\end{equation}
+$$</p>
+<p>$$
+\begin{equation}
+= \frac{k(k+1) + 2(k+1)}{2}
+\end{equation}
+$$</p>
+<p>$$
+\begin{equation}
+= \frac{(k+1)(k+2)}{2}
+\end{equation}
+$$</p>
+<p>$$
+\begin{equation}
+= \frac{(k+1)((k+1)+1)}{2}
+\end{equation}
+$$</p>
+<hr />
+<h2>Ref</h2>
+<ul>
+<li><a href="https://katex.org/docs/supported.html">KaTeX Documentation</a></li>
+</ul>
+]]></content>
+        <published>2025-05-19T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Using MDX]]></title>
+        <id>https://astro-chiri.netlify.app/using-mdx</id>
+        <link href="https://astro-chiri.netlify.app/using-mdx"/>
+        <updated>2025-05-12T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>import Callout from ‘@/components/examples/Callout.astro’
+import CounterButton from ‘@/components/examples/CounterButton.astro’
+import Tag from ‘@/components/examples/Tag.astro’</p>
+<p>MDX combines Markdown with embedded JavaScript and JSX, making it easy to build interactive content. Below are some examples.</p>
+<hr />
+<h2>Callout</h2>
+
+<h2>Button</h2>
+
+<h2>Tag</h2>
+
+<hr />
+<h2>Ref</h2>
+<ul>
+<li><a href="https://mdxjs.com/docs/what-is-mdx">MDX Syntax Documentation</a></li>
+<li><a href="https://docs.astro.build/en/guides/markdown-content/#markdown-and-mdx-pages">Astro Usage Documentation</a></li>
+</ul>
+]]></content>
+        <published>2025-05-12T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The TR-808 Story]]></title>
+        <id>https://astro-chiri.netlify.app/the-tr-808-story</id>
+        <link href="https://astro-chiri.netlify.app/the-tr-808-story"/>
+        <updated>2025-05-10T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p><img src="https://astro-chiri.netlify.app/.netlify/images?url=tollerton%2F_astro%2Ftr-808.C1oR88Ee.jpg&amp;fm=webp&amp;w=800&amp;h=534" alt="_tr-808" /></p>
+<p>The Roland TR-808 Rhythm Composer, often simply called the “808,” is one of the most influential electronic instruments ever created. Despite its initial commercial failure, this drum machine went on to shape entire genres of music and become a cultural icon. This is the story of how a machine designed to replace drummers ended up revolutionizing music production.</p>
+<h2>The Birth of the 808</h2>
+<p>In the late 1970s, Roland Corporation was looking to create an affordable drum machine that could compete with the expensive Linn LM-1, which was the first drum machine to use digital samples. The company’s engineers, led by <strong>Ikutaro Kakehashi</strong>, set out to create something different—a machine that would use <strong>analog synthesis</strong> to generate drum sounds rather than digital samples.</p>
+<p>The development team faced several challenges:</p>
+<ol>
+<li><strong>Cost constraints</strong> - The machine needed to be affordable for home musicians</li>
+<li><strong>Sound design</strong> - Creating realistic drum sounds using only analog circuits</li>
+<li><strong>User interface</strong> - Making it intuitive for musicians to program rhythms</li>
+</ol>
+<blockquote>
+<p>“We wanted to create something that would make drummers obsolete, but instead we created something that made everyone want to be a drummer.” — Ikutaro Kakehashi</p>
+</blockquote>
+<h2>The “Failed” Launch</h2>
+<p>When the TR-808 was released in 1980, it was met with <strong>disappointing sales</strong>. The machine cost $1,195 (approximately $4,000 in today’s dollars) and was criticized for its “unrealistic” drum sounds. Professional studios preferred the more expensive Linn LM-1, which used actual drum samples.</p>
+<p>The 808’s analog sounds were considered too electronic and artificial:</p>
+<ul>
+<li>The kick drum was too boomy and lacked the punch of real drums</li>
+<li>The snare had a distinctive “clap” sound that sounded nothing like a real snare</li>
+<li>The hi-hats were metallic and harsh</li>
+<li>The toms had a characteristic “boing” sound</li>
+</ul>
+<p>Roland discontinued the TR-808 in 1983 after selling only about <strong>12,000 units</strong>, considering it a commercial failure.</p>
+<h2>The Hip-Hop Revolution</h2>
+<p>The TR-808’s fortunes changed dramatically when <strong>hip-hop producers</strong> discovered its unique sound. In the early 1980s, young producers in New York, particularly in the Bronx, began experimenting with the machine.</p>
+<p>Key early adopters included <strong>Afrika Bambaataa</strong> who used the 808 on “Planet Rock” (1982), <strong>Marley Marl</strong> who pioneered the use of 808 kicks in hip-hop, <strong>Rick Rubin</strong> who incorporated 808 sounds in early Def Jam recordings, and <strong>The Bomb Squad</strong> who used 808s extensively in Public Enemy’s production.</p>
+<p>The 808’s distinctive kick drum became the foundation of hip-hop’s rhythmic backbone. Its deep, resonant bass sound could shake entire neighborhoods when played through powerful sound systems.</p>
+<h2>The Miami Bass Phenomenon</h2>
+<p>In the mid-1980s, the TR-808 found another home in <strong>Miami</strong>, where it became the centerpiece of a new genre called <strong>Miami Bass</strong> or <strong>Booty Bass</strong>. Producers like <strong>2 Live Crew</strong> made the 808 kick drum the star of their tracks, <strong>DJ Magic Mike</strong> created entire albums built around 808 patterns, and <strong>Luke Skyywalker</strong> used 808s to create the signature Miami sound.</p>
+<p>The 808’s ability to produce extremely low frequencies made it perfect for the car audio culture that was emerging in Miami, where bass-heavy music became a status symbol.</p>
+<h2>Electronic Music and Dance</h2>
+<p>The TR-808’s influence extended far beyond hip-hop. In the late 1980s and early 1990s, it became essential in house music and techno. <strong>Frankie Knuckles</strong> and <strong>Marshall Jefferson</strong> used 808s in early Chicago house, while the machine’s hi-hats and claps became signature sounds of house music. Its programmable sequencer allowed for complex rhythmic patterns.</p>
+<p>In techno music, <strong>Juan Atkins</strong>, <strong>Derrick May</strong>, and <strong>Kevin Saunderson</strong> (the Belleville Three) incorporated 808s into Detroit techno. The machine’s futuristic sounds fit perfectly with techno’s robotic aesthetic, and its affordability made it accessible to bedroom producers.</p>
+<h2>The 808 in Modern Music</h2>
+<p>Even today, the TR-808 continues to influence music production through software emulations and hardware reissues. <strong>Roland Cloud</strong> offers the official software version of the 808, <strong>Native Instruments</strong> includes 808 samples in their libraries, and <strong>Ableton Live</strong> features 808-inspired drum racks.</p>
+<p>Hardware reissues include the <strong>Roland TR-08</strong> boutique series reissue, the <strong>Roland TR-8S</strong> modern drum machine with 808 sounds, and the <strong>Behringer RD-8</strong> affordable clone of the original.</p>
+<h2>Cultural Impact</h2>
+<p>The TR-808 has transcended its role as a musical instrument to become a <strong>cultural symbol</strong>. It has influenced fashion with 808-inspired clothing and accessories, art with visual artists incorporating 808 imagery in their work, film through documentaries and movies about the machine’s impact, and literature with books and articles celebrating its legacy.</p>
+<blockquote>
+<p>“The 808 didn’t just change music—it changed culture. It gave a voice to communities that didn’t have access to expensive studio equipment.” — Questlove</p>
+</blockquote>
+<h2>The Enduring Legacy</h2>
+<p>The Roland TR-808’s story is a perfect example of how <strong>failure can lead to innovation</strong>. What was initially considered a commercial flop became one of the most important musical instruments of the 20th century.</p>
+<p>Key lessons from the 808 story include embracing imperfection (the 808’s “flaws” became its greatest strengths), understanding that accessibility matters (affordable tools can democratize music creation), recognizing that community adoption is crucial (users often find creative applications designers never imagined), and appreciating that timeless design remains relevant for decades.</p>
+<p>The TR-808’s influence continues to grow, proving that sometimes the most revolutionary innovations come from unexpected places. From its humble beginnings as a “failed” drum machine to its status as a cultural icon, the 808 has truly earned its place in music history.</p>
+<hr />
+<p><em>The TR-808 may have been discontinued in 1983, but its beat goes on, inspiring new generations of musicians and producers to create the music of tomorrow.</em></p>
+]]></content>
+        <published>2025-05-10T00:00:00.000Z</published>
+    </entry>
+</feed>
